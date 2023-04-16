@@ -2605,7 +2605,7 @@ input, select, textarea {
 
 			.features li:before {
 				display: block;
-				color: #00ffcc;
+				color: #ffa800;
 				position: absolute;
 				left: 1.75em;
 				top: 2.75em;
@@ -2818,7 +2818,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #2d112b;
+			background-color: #14230d;
 			color: #c8ece9;
 		}
 
@@ -2977,11 +2977,11 @@ input, select, textarea {
 			}
 
 		.wrapper.style2 {
-			background-color: #2e3842;
+			background-color: #56585a;
 		}
 
 		.wrapper.style3 {
-			background-color: #505393;
+			background-color: #56585a;
 			color: #d3d4e4;
 		}
 
@@ -3565,7 +3565,7 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background-color: #FEDCC8;
+		background-color: #74c7ca;
 		margin: 0;
 		align-items: center;
 
@@ -3699,7 +3699,7 @@ input, select, textarea {
 			-ms-transition-delay: 1.25s;
 			transition-delay: 1.25s;
 			content: '';
-			background: #2e3842;
+			background: #74c7ca;
 			display: block;
 			width: 100%;
 			height: 100%;
@@ -3891,7 +3891,7 @@ input, select, textarea {
 
 	#footer {
 		padding: 2em 0 1em 0 ;
-		background-color: #1d242a;
+		background-color: #14230d;
 		text-align: center;
 	}
 
@@ -3900,7 +3900,7 @@ input, select, textarea {
 		}
 
 			#footer .icons a {
-				color: rgba(255, 255, 255, 0.5);
+				color: rgba(255, 255, 255, 0.692);
 			}
 
 				#footer .icons a:hover {
@@ -3981,7 +3981,7 @@ input, select, textarea {
 	}
 
 	body.landing #footer {
-		background-color: rgba(29, 36, 42, 0.9);
+		background-color: #444444;
 	}
 
 	body.is-mobile.landing #page-wrapper {

@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #2d112b;
+  background: #14230d;
 }
 .card {
   width: var(--card-width);
