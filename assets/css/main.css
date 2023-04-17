@@ -72,6 +72,82 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Responsiveness fixes */
+	@media only screen and (min-width: 1920px) {
+		.hero-mobile {
+			display: none;
+		}
+	}
+
+	@media only screen and (max-width: 1900px) {
+		.hero-mobile {
+			display: block;
+		}
+		#banner.hero {
+			display: none;
+		}
+
+		body.landing #page-wrapper {
+			background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0)), url("images/banner.png");
+			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../../images/banner.png");
+			background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../../images/banner.png");
+			background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../../images/banner.png");
+			background-attachment: fixed;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding-top: 0;
+		}
+	
+		body.is-mobile.landing #banner,
+		body.is-mobile.landing .wrapper.style4 {
+			background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0)), url("images/banner.png");
+			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../../images/banner.png");
+			background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../../images/banner.png");
+			background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../../images/banner.png");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+
+	@media screen and (max-width: 736px) {
+
+		.card-container {
+		  flex-direction: column;
+		}
+		.card {
+			margin-top: 3em;
+			margin-bottom: 3em;
+		}
+	}
+
+	@media screen and (min-width: 737px) {
+
+		.card-container {
+		  flex-direction: row;
+		}
+		.card {
+			margin: 0 2em;
+		}
+	}
+
+/* Video */
+	.video-container {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		padding-top: 56.25%;
+	}
+	.video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+
 /* Basic */
 
 	@-ms-viewport {
@@ -132,6 +208,8 @@ input, select, textarea {
 				font-size: 11pt;
 				letter-spacing: 0.0375em;
 			}
+
+			
 
 		}
 
@@ -2488,7 +2566,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #ed4933;
+			background-color: #eb341c;
 			box-shadow: none !important;
 			color: #ffffff !important;
 		}
@@ -2498,7 +2576,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #ef5e4a !important;
+				background-color: #264921 !important;
 			}
 
 			input[type="submit"].primary:active,
@@ -2753,9 +2831,17 @@ input, select, textarea {
 				width: 55%;
 			}
 
+			#video.spotlight .content {
+				width: 80%;
+			}
+
 		}
 
 		@media screen and (max-width: 980px) {
+
+			.icons.major {
+				display: none;
+			}
 
 			.spotlight {
 				display: block;
@@ -2770,6 +2856,13 @@ input, select, textarea {
 				}
 
 				.spotlight .content {
+					padding: 4em 3em 2em 3em ;
+					max-width: none;
+					text-align: center;
+					width: 100%;
+				}
+
+				#video.spotlight .content {
 					padding: 4em 3em 2em 3em ;
 					max-width: none;
 					text-align: center;
@@ -2912,7 +3005,7 @@ input, select, textarea {
 			}
 
 			.wrapper.style1 .icon.major {
-				border-color: rgba(0, 0, 0, 0.125);
+				border-color: rgba(81, 255, 0, 0.125);
 			}
 
 			.wrapper.style1 ul.alt li {
@@ -3564,8 +3657,12 @@ input, select, textarea {
 
 /* Banner */
 
-	#banner {
+	#banner.hero {
 		background-color: #74c7ca;
+	}
+
+	#banner {
+		/* background-color: #74c7ca; */
 		margin: 0;
 		align-items: center;
 
@@ -3589,7 +3686,7 @@ input, select, textarea {
 		text-align: center;
 	}
 
-		#banner h2 {
+		h2 {
 			-moz-transform: scale(1);
 			-webkit-transform: scale(1);
 			-ms-transform: scale(1);
@@ -3606,7 +3703,7 @@ input, select, textarea {
 			z-index: 1;
 		}
 
-			#banner h2:before, #banner h2:after {
+			h2:before, h2:after {
 				-moz-transition: width 0.85s ease;
 				-webkit-transition: width 0.85s ease;
 				-ms-transition: width 0.85s ease;
@@ -3623,12 +3720,12 @@ input, select, textarea {
 				width: 100%;
 			}
 
-			#banner h2:before {
+			h2:before {
 				top: 0;
 				left: 0;
 			}
 
-			#banner h2:after {
+			h2:after {
 				bottom: 0;
 				right: 0;
 			}
@@ -3712,7 +3809,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#banner {
-				padding: 7em 3em 5em 3em ;
+				padding: 25em 3em 5em 3em ;
 				height: auto;
 				min-height: 0;
 			}
@@ -3753,138 +3850,6 @@ input, select, textarea {
 
 	body.is-preload #banner:after {
 		opacity: 1;
-	}
-
-/* CTA */
-
-	#cta .inner {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		max-width: 45em;
-	}
-
-		#cta .inner header {
-			-moz-order: 1;
-			-webkit-order: 1;
-			-ms-order: 1;
-			order: 1;
-			padding-right: 3em;
-			width: 70%;
-		}
-
-			#cta .inner header p {
-				color: inherit;
-			}
-
-		#cta .inner .actions {
-			-moz-order: 2;
-			-webkit-order: 2;
-			-ms-order: 2;
-			order: 2;
-			width: 30%;
-		}
-
-		@media screen and (max-width: 980px) {
-
-			#cta .inner {
-				display: block;
-				text-align: center;
-			}
-
-				#cta .inner header {
-					padding-right: 0;
-					width: 100%;
-				}
-
-				#cta .inner .actions {
-					margin-left: auto;
-					margin-right: auto;
-					max-width: 20em;
-					width: 100%;
-				}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			#cta .inner .actions {
-				max-width: none;
-			}
-
-		}
-
-/* Main */
-
-	#main > header {
-		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-attachment: fixed;
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		text-align: center;
-	}
-
-		#main > header h2 {
-			font-size: 1.75em;
-			margin: 0 0 0.5em 0;
-		}
-
-		#main > header p {
-			color: inherit;
-			letter-spacing: 0.225em;
-			text-transform: uppercase;
-			top: 0;
-		}
-
-			#main > header p a {
-				color: inherit;
-			}
-
-		@media screen and (max-width: 1680px) {
-
-			#main > header {
-				padding: 10em 0 8em 0 ;
-			}
-
-		}
-
-		@media screen and (max-width: 1280px) {
-
-			#main > header {
-				padding: 8em 3em 6em 3em ;
-			}
-
-		}
-
-		@media screen and (max-width: 980px) {
-
-			#main > header {
-				padding: 10em 3em 8em 3em ;
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			#main > header {
-				padding: 5em 3em 3em 3em ;
-			}
-
-				#main > header h2 {
-					font-size: 1.25em;
-					margin: 0 0 1em 0;
-				}
-
-		}
-
-	body.is-mobile #main > header {
-		background-attachment: scroll;
 	}
 
 /* Footer */
@@ -3969,14 +3934,6 @@ input, select, textarea {
 /* Landing */
 
 	body.landing #page-wrapper {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-attachment: fixed;
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
 		padding-top: 0;
 	}
 
@@ -3988,17 +3945,7 @@ input, select, textarea {
 		background: none;
 	}
 
-	body.is-mobile.landing #banner,
-	body.is-mobile.landing .wrapper.style4 {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
 
 	body.is-mobile.landing #footer {
-		background-color: #1d242a;
+		background-color: #444444;
 	}
