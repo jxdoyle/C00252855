@@ -11,5 +11,5 @@ https://github.com/jxdoyle/lost-forest
 Link to earlier discontinued idea<br>
 https://github.com/jxdoyle/ar-hunt
 
-Direct link to final report
+Direct link to final report<br>
 https://github.com/jxdoyle/fyp/blob/main/assets/files/Final%20Report.pdf
